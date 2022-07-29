@@ -1,22 +1,20 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Script from 'next/script'
 import styles from './layout.module.css';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
 import profilePic from '../public/profile.jpg';
 
-const name = '小兔叽';
-export const siteTitle = '前端小兔叽';
+const name = '难得有趣';
+export const siteTitle = '难得有趣';
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="前端学习" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -26,7 +24,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
       </Head>
       <header className={styles.header}>
-        {home && (
+        {/* {home && (
           <>
             <Image
               priority
@@ -38,13 +36,13 @@ export default function Layout({ children, home }) {
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
-        )}
+        )} */}
       </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>← 回到首页</a>
           </Link>
         </div>
       )}
