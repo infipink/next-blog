@@ -1,7 +1,7 @@
 import Layout from 'components/layout';
 import Head from 'next/head';
 
-import { steps, infos } from './data';
+import { steps, infos } from 'utils/overallManagement';
 
 const Demo = (props) => {
   return (
