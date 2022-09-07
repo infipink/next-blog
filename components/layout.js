@@ -3,21 +3,22 @@ import Image from 'next/image';
 import Script from 'next/script';
 import styles from './layout.module.css';
 import Link from 'next/link';
-import utilStyles from '../styles/utils.module.css';
-import profilePic from '../public/profile.jpg';
 
 const name = '难得有趣';
 export const siteTitle = '难得有趣';
 
 export default function Layout({ children, home }) {
   return (
-    <div className="w-screen h-screen relative">
-      <div className="sticky top-0 left-0 w-full border-b border-orange-600">
+    <div className="relative w-screen h-screen">
+      <div className="bg-[#1b1b1b] text-[#cdcdcd] sticky top-0 left-0 w-full border-b border-orange-600 flex">
         <div className="max-w-7xl mx-auto py-0.5">
-        头部
+          <Link href={`/navigate`}>导航</Link>
+        </div>
+        <div className="max-w-7xl mx-auto py-0.5">
+          <Link href={`/softTest`}>软考高级</Link>
         </div>
       </div>
-      <div className={styles.container}>
+      <div className="max-w-5xl mx-auto my-3">
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="前端学习" />
