@@ -1,10 +1,15 @@
 import Layout from 'components/layout';
-import Link from "next/link";
+import Link from 'next/link';
 
 const Demo = (props) => {
+  const infos = ['整体管理', '范围管理'];
   return (
     <Layout home>
-      <Link href={`/softTest/overallManagement`}>整体管理</Link>
+      {infos.map((x, i) => (
+        <div key={i} className="mb-2">
+          <Link href={`/softTest/${i}`}>{x}</Link>
+        </div>
+      ))}
     </Layout>
   );
 };
