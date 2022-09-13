@@ -9,23 +9,32 @@ import datas from 'pages/data';
 const Demo = (props) => {
   const router = useRouter();
   const nowIndex = Number(router.query.id);
-  console.log(nowIndex, datas);
   const [steps, infos, title] = datas[nowIndex];
 
   const [isCollapse, setIsCollapse] = useState(false);
+  const [showIndex, setSHowIndex] = useState(0);
+
   return (
     <Layout home>
       <Head>
         <title>{title}</title>
       </Head>
       <h3 className="text-red-500">{title}</h3>
-      <div>管理步骤(共{steps.length}步)</div>
-      {steps.map((step, i) => (
-        <div className="mb-10" key={i}>
-          <div className="text-yellow-700">
-            {i + 1}.{step}
-          </div>
-          {infos[i].map((y, yi) => (
+      <div className="flex">
+        <div className="w-32">
+          {steps.map((step, i) => (
+            <div
+              className={`${
+                i === showIndex ? 'text-yellow-700' : ''
+              } mr-5 mb-6 cursor-pointer`}
+              onClick={() => setSHowIndex(i)}
+            >
+              {i + 1}.{step}
+            </div>
+          ))}
+        </div>
+        <div className="flex-1">
+          {infos[showIndex].map((y, yi) => (
             <div key={yi} className="flex mb-5">
               <div
                 className="text-blue-600 w-32 text-right mr-4 mb-2 cursor-pointer"
@@ -41,7 +50,7 @@ const Demo = (props) => {
             </div>
           ))}
         </div>
-      ))}
+      </div>
     </Layout>
   );
 };
