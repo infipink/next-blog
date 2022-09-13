@@ -9,7 +9,7 @@ import datas from 'data';
 const Demo = (props) => {
   const router = useRouter();
   const nowIndex = Number(router.query.id);
-  const [steps, infos, title] = datas[nowIndex];
+  const [steps, infos, title] = datas[nowIndex || 0];
 
   const [isCollapse, setIsCollapse] = useState(false);
   const [showIndex, setSHowIndex] = useState(0);
