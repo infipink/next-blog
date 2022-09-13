@@ -18,7 +18,7 @@ export default function Layout({ children, home }) {
           <Link href={`/softTest`}>软考高级</Link>
         </div>
       </div>
-      <div className="max-w-5xl mx-auto my-3">
+      <div className="w-screen p-10">
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="前端学习" />
