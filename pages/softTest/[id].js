@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 import { useState } from 'react';
 
-import datas from 'pages/data';
+import datas from 'data';
 
 const Demo = (props) => {
   const router = useRouter();
