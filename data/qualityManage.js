@@ -187,7 +187,7 @@ const infos = [
   ],
   [
     {
-      name: 'ISO9000系列的基本原则',
+      name: 'ISO90000系列的基本原则',
       content: [
         '以顾客为中心',
         '领导作用',
@@ -227,3 +227,4 @@ const infos = [
 const title = '项目质量管理';
 
 export default [steps, infos, title];
+

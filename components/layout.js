@@ -9,7 +9,7 @@ export const siteTitle = '难得有趣';
 
 export default function Layout({ children, home }) {
   return (
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-screen bg-[#1a1a1a]">
       <div className="bg-[#1b1b1b] text-[#cdcdcd] sticky top-0 left-0 w-full border-b border-orange-600 flex">
         <div className="max-w-7xl mx-auto py-0.5">
           <Link href={`/navigate`}>导航</Link>
